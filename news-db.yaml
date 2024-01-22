@@ -10,10 +10,11 @@ metadata:
         image: aluracursos/mysql-db:1
         ports:
           - containerPort: 3306
-        envs:
-          - name: "MYSQL_ROOT_PASSWORD"
-            value: 'q1w2e3r4'
-          - name: "MYSQL_DATABSE"
-            value: "empresa"
-          - name: "MYSQL_PASSWORD"
-            value: "q1w2e3r4"
+        envFrom:
+          - configMap: db-configmap
+        # env:
+        #   - name: MYSQL_ROOT_PASSWORD
+        #     valueFrom:
+        #       configMapKeyRef:
+        #         name: db-configmap
+        #         key: MYSQL_ROOT_PASSWORD
