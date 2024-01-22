@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: news-portal-configMap
+data:
+  # IP_SISTEMA: http://localhost:30001 #WINDOWS
+  IP_SISTEMA: http://<internalIP>:3001 #LINUX
