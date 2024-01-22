@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: first-pod-declareted
+spec:
+  containers:
+   - name: ngix-container
+     image: nginx:latest
+
+## kubectl apply -f .\first-pod.yaml to create this pod
+## you can change this configuration and run that command again and pod will be replaced.
+
