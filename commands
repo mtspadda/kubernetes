@@ -1,9 +1,11 @@
 kubectl run nginx-pod --image=nginx:latest
 kubectl get pods
 kubectl get pods --watch #show any att on pods status
-kubectl describe <nome> #describe logs of creation and erros during start up
-kubectl edit pods <nome> #show a textfile with pods configuration which you can edit
+kubectl describe <name> #describe logs of creation and erros during start up
+kubectl edit pods <name> #show a textfile with pods configuration which you can edit
 kubectl apply -f .\first-pod.yaml #to create a pod with yaml file
-kubectl delete pod <nome> #kill the pod
+kubectl delete pod <name> #kill the pod
 kubectl delete -f \.first-pod-clareted #also kill the but by the archive
-kubectl exec -it <nome> -- <comando> #enter into the pod with bash
+kubectl exec -it <name> -- <command> #enter into the pod with bash
+kubectl get pod -o wide #show information more information about pods
+kubectl get svc #show services
